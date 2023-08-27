@@ -3,16 +3,11 @@ const getGifsFromApi = async (category) => {
 	const response = await fetch(url);
 	const { data } = await response.json();
 
-	console.log(data);
-
 	const result = data.map((gif) => ({
 		id: gif.id,
 		title: gif.title,
 		src: gif.images.fixed_width.url,
 	}));
-
-	console.log(category);
-	console.log(result);
 
 	return result;
 };
