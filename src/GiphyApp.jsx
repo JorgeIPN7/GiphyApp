@@ -3,11 +3,9 @@ import AddCategory from './AddCategory';
 import GifGrid from './GifGrid';
 
 export const GiphyApp = () => {
-	const [categories, setCategories] = useState(['Dragon ball', 'Pokémon']);
+	const [categories, setCategories] = useState([]);
 
 	const onClickAddNewCategory = (category) => {
-		console.log('Category clicked from child: ' + category);
-
 		if (categories.includes(category)) return;
 
 		setCategories([category, ...categories]);
